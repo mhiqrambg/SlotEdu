@@ -1,0 +1,38 @@
+.slot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.slot-symbol {
+  animation: spin 1s ease-in-out;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+.win-message {
+  font-size: 1.5rem;
+  color: green;
+  text-align: center;
+}
+
+.lose-message {
+  font-size: 1.5rem;
+  color: red;
+  text-align: center;
+}
+
+.draw-message {
+  font-size: 1.5rem;
+  color: blue;
+  text-align: center;
+}

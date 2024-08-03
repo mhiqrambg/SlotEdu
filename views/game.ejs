@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game 1 - Slot Sederhana</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+      .slot-container {
+        margin-top: 50px;
+        text-align: center;
+      }
+      .slots {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      .slot {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #ccc;
+        margin: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2em;
+      }
+      .result {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container slot-container">
+      <h1>Slot Sederhana</h1>
+      <h2>Selamat datang <b><%= name %></b></h2>
+      <p>Tekan tombol untuk memutar slot!</p>
+      <div style="text-align: center">
+        Saldo Anda :
+        <h2><%= saldoAwal %></h2>
+        <p>Kemenangan spin [7, 13 , 27] : <%= totalSpins %></p>
+      </div>
+      <div class="slots">
+        <div class="slot"><%= symbol1 %></div>
+        <div class="slot"><%= symbol2 %></div>
+        <div class="slot"><%= symbol3 %></div>
+      </div>
+      <form method="get" action="/game">
+        <button type="submit" class="btn btn-primary">Putar</button>
+      </form>
+      <p class="result"><%= resultMessage %></p>
+    </div>
+  </body>
+</html>
